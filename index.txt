@@ -39,7 +39,7 @@ db.product.aggregate([
     },
   ]).forEach((doc) => {
     doc.duplicate.shift();
-    db.product.deleteMany({ _id: { $in: doc.duplicate } });
+    db.product.deleteMany({ _id: { $in: doc.duplicate } })
   });
 
 
